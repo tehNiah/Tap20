@@ -33,7 +33,8 @@ class BMW(Car):
           self.fuel = arg.get("fuel")
 
 class Mercedes(Car):
-"""Dette er en av bilene som henter informasjon fra Car klassen"""
+"""Dette er en av bilene som henter informasjon fra Car klassen
+"""
     def __init__(self, **arg):
         Car.__init__(self)
         self.model = "Mercedes"

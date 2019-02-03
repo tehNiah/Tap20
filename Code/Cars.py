@@ -23,8 +23,8 @@ class Car:
                 The car has {s.doors} doors and {s.seets} seets""".format(s=self)
 
 class BMW(Car):
-"""Dette er en av bilene som henter informasjon fra Car klassen
-"""
+    """Dette er en av bilene som henter informasjon fra Car klassen
+    """
     def __init__(self, **arg):
           Car.__init__(self)
           self.model = "BMW"
@@ -33,8 +33,8 @@ class BMW(Car):
           self.fuel = arg.get("fuel")
 
 class Mercedes(Car):
-"""Dette er en av bilene som henter informasjon fra Car klassen
-"""
+    """Dette er en av bilene som henter informasjon fra Car klassen
+    """
     def __init__(self, **arg):
         Car.__init__(self)
         self.model = "Mercedes"
@@ -44,8 +44,8 @@ class Mercedes(Car):
 
 
 class Fuel:
-"""Her kan bilene hente "bensin" fra fuel klassen
-"""
+    """Her kan bilene hente "bensin" fra fuel klassen
+    """
     def __init__(self, **arg):
         self.liters = arg.get("liters")
         self.type = arg.get("type")
@@ -55,8 +55,8 @@ class Fuel:
 
 
 class CarFactory:
-"""Denne klassen "oppfører" seg som en bil fabrikk hvor man kan "lage" en bil
-"""
+    """Denne klassen "oppfører" seg som en bil fabrikk hvor man kan "lage" en bil
+    """
     def __init__(self, **kwargs):
         self.car = kwargs.get("type")(type=kwargs.get("car_type"),doors=kwargs.get("doors"),fuel=Fuel(liters=kwargs.get("liters"),type=kwargs.get("fuel_type")))
 
@@ -66,8 +66,8 @@ class CarFactory:
 
 
 class CarStore:
-"""Denne klassen "oppfører" seg som en bil garasje hvor man kan lagre biler
-"""
+    """Denne klassen "oppfører" seg som en bil garasje hvor man kan lagre biler
+    """
     inventory = []
 
     def __init__(self, **kwargs):
@@ -98,8 +98,8 @@ print("\n","-"*100)
 
 
 class Lada(Car):
-"""Vet ikke helt om man kan kalle dette en bil... men det er iallefall en bil klasse
-"""
+    """Vet ikke helt om man kan kalle dette en bil... men det er iallefall en bil klasse
+    """
     def __init__(self, **arg):
         Car.__init__(self)
         self.model = "Lada"
